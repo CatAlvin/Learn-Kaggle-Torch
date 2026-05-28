@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+kaggle.json
+.kaggle/
+access_token
+
+# Kaggle data
+data/raw/
+data/processed/
+data/external/
+
+# Generated outputs
+outputs/models/
+outputs/logs/
+outputs/figures/
+outputs/submissions/
+
+# Large files
+*.zip
+*.csv
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
