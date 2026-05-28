@@ -34,6 +34,14 @@ print(f"Sample Submission Shape: {sample_submission_df.shape}")
 print("Submission Columns:")
 print(sample_submission_df.columns)
 
+
+# assert
+assert submission_df.shape == sample_submission_df.shape
+assert list(submission_df.columns) == list(sample_submission_df.columns)
+assert submission_df["PassengerId"].equals(test_df["PassengerId"])
+assert submission_df["Survived"].isin([0, 1]).all()
+assert not submission_df.isna().any().any()
+
 # save csv
 OUTPUT_SUBMISSION_DIR.mkdir(parents=True, exist_ok=True)
 submission_df.to_csv(OUTPUT_SUBMISSION_DIR / "rule_gender_submission.csv", index=False)
